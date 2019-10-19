@@ -1,6 +1,6 @@
 body
   box-sizing: border-box
-  font-family: sans-serif
+  +reg
 img
   max-width: 100%
 .container 
@@ -12,10 +12,30 @@ img
 @media ( max-width: 768px)
   .container
     max-width: 580px
-    width: 95%
+    width: 90%
 
 .button
   border-radius: 10px
   background-color: $main-color
   border: none
   padding: 19px 30px 17px 30px
+  &:hover
+    background-color: lighten($main-color, 5%)
+    cursor: pointer
+.section
+  &-title
+    font-size: 24px
+    text-align: center
+    +bold
+.input
+  border: 1px solid $border-input
+  padding: 23px 23px
+  padding-right: 60px
+  border-radius: 10px
+  font-size: 15px
+  outline:none
+  &:active, &:hover, &:focus 
+    outline: 0
+    outline-offset: 0
+  &:focus
+    border-color: $main-color
